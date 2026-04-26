@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bestellen · Selin Bakt</title>
+  <meta name="description" content="Hoe bestel je een taart bij Selin Bakt? Stuur een berichtje via WhatsApp of Instagram DM en we regelen de rest."/>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <style>
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 8px;
+    }
+    .faq-item {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--mint);
+      transition: transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s;
+    }
+    .faq-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .faq-item h4 { font-size: .98rem; margin-bottom: 8px; color: var(--dark); }
+    .faq-item p  { font-size: .88rem; color: var(--muted); line-height: 1.65; }
+
+    .contact-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 72px;
+    }
+    .contact-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s;
+    }
+    .contact-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .contact-card .c-icon { font-size: 2.8rem; margin-bottom: 18px; }
+    .contact-card h3 { font-size: 1.4rem; margin-bottom: 10px; }
+    .contact-card p  { color: var(--muted); font-size: .95rem; margin-bottom: 28px; line-height: 1.7; }
+    .contact-card.featured { background: var(--coral); color: var(--white); }
+    .contact-card.featured h3 { color: var(--white); }
+    .contact-card.featured p  { color: rgba(255,255,255,.85); }
+
+    .steps-wrap { max-width: 660px; margin: 0 auto; }
+    .steps-wrap h2 { font-size: clamp(1.8rem,3vw,2.4rem); margin-bottom: 40px; text-align: center; }
+
+    @media (max-width: 640px) {
+      .faq-grid      { grid-template-columns: 1fr; }
+      .contact-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="/" class="logo-text">
+        <span class="selin">Selin</span><span class="bakt">Bakt</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu openen"
+        onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/assortiment/">Assortiment</a></li>
+        <li><a href="/bestellen/" class="active">Bestellen</a></li>
+        <li><a href="/bestellen/" class="nav-cta">Bestel nu</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <div style="background:var(--cream); padding:72px 0 56px; text-align:center; border-bottom:1px solid rgba(255,111,97,.1);">
+      <div class="container fade-up">
+        <span class="eyebrow">✦ Persoonlijk &amp; snel</span>
+        <h1 style="font-size:clamp(2.4rem,5vw,3.6rem); margin:12px 0 18px;">Jouw taart bestellen</h1>
+        <p style="color:var(--muted); max-width:540px; margin:0 auto; font-size:1.05rem; line-height:1.8;">
+          Geen ingewikkelde formulieren. Stuur gewoon een berichtje — we bespreken samen wat je nodig hebt.
+        </p>
+      </div>
+    </div>
+
+    <!-- CONTACT OPTIES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="eyebrow">Neem contact op</span>
+          <h2>Hoe wil jij bestellen?</h2>
+          <p>Kies de manier die het beste bij jou past — we reageren altijd persoonlijk.</p>
+        </div>
+
+        <div class="contact-cards">
+
+          <div class="contact-card featured fade-up fade-up-delay-1">
+            <div class="c-icon">💬</div>
+            <h3>WhatsApp</h3>
+            <p>De snelste manier. Stuur een bericht met jouw bestelling en ik reageer zo snel mogelijk.</p>
+            <a
+              href="https://wa.me/31600000000?text=Hoi%20Selin!%20Ik%20wil%20graag%20een%20taart%20bestellen."
+              target="_blank" rel="noopener"
+              class="btn btn-white">
+              Open WhatsApp
+            </a>
+          </div>
+
+          <div class="contact-card fade-up fade-up-delay-2">
+            <div class="c-icon">📸</div>
+            <h3>Instagram DM</h3>
+            <p>Volg me op Instagram voor dagelijkse inspiratie en stuur een DM om een bestelling te bespreken.</p>
+            <a
+              href="https://www.instagram.com/selinbakt"
+              target="_blank" rel="noopener"
+              class="btn btn-primary">
+              @selinbakt
+            </a>
+          </div>
+
+        </div>
+
+        <!-- STAPPEN -->
+        <div class="steps-wrap fade-up">
+          <h2>Hoe werkt het?</h2>
+          <ol class="steps">
+            <li>
+              <div>
+                <h4>Stuur een berichtje</h4>
+                <p>Via WhatsApp of Instagram DM. Vertel wat voor taart je wil, voor hoeveel personen en wanneer je hem nodig hebt.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h4>We bespreken de details</h4>
+                <p>Smaak, thema, kleuren, dieetwensen (glutenvrij, vegan) — alles is bespreekbaar. Ik stuur je een offerte op maat.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h4>Aanbetaling &amp; bevestiging</h4>
+                <p>Na akkoord betaal je 50% aanbetaling via Tikkie of bankoverschrijving. De bestelling is dan officieel bevestigd.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h4>Afhalen of bezorgen</h4>
+                <p>Je haalt de taart op in Amsterdam, of ik bezorg hem bij jou thuis voor een klein bezorgbedrag afhankelijk van afstand.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" style="background:rgba(168,213,186,.1); padding-top:0;">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="eyebrow">Veelgestelde vragen</span>
+          <h2>Alles wat je wil weten</h2>
+          <p>Staat jouw vraag er niet bij? Stuur gewoon een berichtje!</p>
+        </div>
+
+        <div class="faq-grid">
+
+          <div class="faq-item fade-up fade-up-delay-1">
+            <h4>Hoe ver van tevoren moet ik bestellen?</h4>
+            <p>Minimaal 5 werkdagen. Voor grote bestellingen of speciale gelegenheden: 10+ dagen van tevoren.</p>
+          </div>
+
+          <div class="faq-item fade-up fade-up-delay-2">
+            <h4>Kan ik ook glutenvrij of vegan bestellen?</h4>
+            <p>Ja! Geef het aan bij je bestelling en ik pas het recept aan. Er geldt een kleine meerprijs mogelijk.</p>
+          </div>
+
+          <div class="faq-item fade-up fade-up-delay-3">
+            <h4>Bezorg je ook buiten Amsterdam?</h4>
+            <p>In overleg mogelijk voor de regio (Amstelveen, Haarlem, Utrecht). Bespreek dit via WhatsApp.</p>
+          </div>
+
+          <div class="faq-item fade-up fade-up-delay-1">
+            <h4>Hoe bewaar ik de taart?</h4>
+            <p>In de koelkast, afgedekt. Haal hem 30 minuten voor het serveren eruit zodat hij op temperatuur komt.</p>
+          </div>
+
+          <div class="faq-item fade-up fade-up-delay-2">
+            <h4>Kan ik een inspiratiefoto meesturen?</h4>
+            <p>Zeker! Foto's via WhatsApp zijn super welkom. Zo weet ik precies wat je voor ogen hebt.</p>
+          </div>
+
+          <div class="faq-item fade-up fade-up-delay-3">
+            <h4>Wat als ik wil annuleren?</h4>
+            <p>Tot 72 uur voor de leveringsdatum kun je kosteloos annuleren. Daarna vervalt de aanbetaling.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section fade-up">
+      <div class="container" style="position:relative;z-index:1;">
+        <h2>Make today a cake day.</h2>
+        <p>Stuur een berichtje en ik help je meteen verder met jouw perfecte taart.</p>
+        <div class="btn-group" style="justify-content:center;">
+          <a
+            href="https://wa.me/31600000000?text=Hoi%20Selin!%20Ik%20wil%20graag%20een%20taart%20bestellen."
+            target="_blank" rel="noopener"
+            class="btn btn-white">
+            💬 Stuur een WhatsApp
+          </a>
+          <a href="/assortiment/"
+            class="btn" style="color:rgba(255,255,255,.9);border-color:rgba(255,255,255,.4);">
+            Bekijk assortiment
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo logo-text" style="font-size:1.5rem;">
+            <span class="selin">Selin</span><span class="bakt">Bakt</span>
+          </div>
+          <p>Handgemaakte taarten op bestelling in Amsterdam. Elk stuk gemaakt met verse ingrediënten en een flinke dosis liefde.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/selinbakt" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">📸</a>
+            <a href="https://wa.me/31600000000" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div>
+          <h4>Navigatie</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/assortiment/">Assortiment</a></li>
+            <li><a href="/bestellen/">Bestellen</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/31600000000" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/selinbakt" target="_blank" rel="noopener">@selinbakt</a></li>
+            <li><a href="mailto:info@selinbakt.nl">info@selinbakt.nl</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Selin Bakt · Amsterdam</p>
+        <p style="color:var(--coral);">Baked with love. ♥</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+  </script>
+
+</body>
+</html>
